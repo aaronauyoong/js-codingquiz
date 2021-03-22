@@ -1,7 +1,7 @@
 # Web APIs: Code Quiz
 Project Owner - Aaron Au Yoong
 <br>
-View live link here: <>
+View live link here: <https://aaronauyoong.github.io/js-codingquiz/.>
 
 At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 

@@ -11,7 +11,7 @@ During our journey to becoming a full-stack web developer, there will come insta
 ## Technologies
 This quiz application was built using HTML, CSS and Javascript. This application primarily relies on Javascript to: 
 <br>
-1) Begin the quiz, 
+1) Start the quiz application,
 <br>
 2) Provide questions and multiple-choice answers, 
 <br>

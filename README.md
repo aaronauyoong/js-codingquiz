@@ -34,8 +34,11 @@ A working quiz application to aid users in testing fundamental Javascript knowle
 ## Installation
 To install this application, please download the zip file, or alternatively clone the repository through GitHub's guidelines. 
 
-## Screenshots
+Please note that this application will not work as intended when opened in Internet Explorer, due to certain Javascript functions being used. 
 
+It is advised to use Google Chrome when engaging with the quiz.
+
+## Screenshots
 1. Starting page of quiz application:
 <br>
 <img src="assets/images/codingquizscreenshot1.png" width="80%">

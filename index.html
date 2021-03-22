@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Code Quiz</title>
+
+</head>
+<body>
+    <nav class="topnavbar">
+        <button class="highscores" onclick="displayHighscores()">View Highscores</button>
+        <!-- Below div is to place timer -->
+        <div id="timer"></div>
+    </nav>
+    <div id="startingPage">
+        <div class="startingQuizInfo">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code related questions within the allocated time limit.
+                    Keep in mind that incorrect answers will penalize your scoretime by 10 seconds. 
+                    You have 15 seconds per question. 
+                    Press the start quiz button below to begin!
+            </p>
+        </div>
+        <div class="buttonContainer">
+            <button id="startQuiz" class="startQuizButton">Start Quiz</button>
+        </div>
+    </div>
+
+    <div id="quizPage">
+        <div id="quizQuestions">
+            <h1>Quiz Questions</h1>
+        </div>
+        <div class="quizButtonContainer">
+            <button id="a" class="quizButtons" onclick="compareAnswer('optionA')">A</button>
+            <button id="b" class="quizButtons" onclick="compareAnswer('optionB')">B</button>
+            <button id="c" class="quizButtons" onclick="compareAnswer('optionC')">C</button>
+            <button id="d" class="quizButtons" onclick="compareAnswer('optionD')">D</button>
+        </div>
+    </div>
+
+    <div id="quizOverPage">
+        <div id="results">
+            <h3>Results</h3>
+            <div id="finalQuizScore"></div>
+            <div class="enterUserName">
+                <input type="text" size = "50" placeholder="Please enter your name to record your score!" name="name" id="initials"/>
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <button id="submitQuizBtn" class="quizButtons">Submit Score</button>
+        </div>
+    </div>
+
+    <div id=highscorePage>
+        <div id="highscoreContainer">
+            <div id="highscoreHeader">
+                <h1>Username</h1>
+                <h1>Final Score</h1>
+            </div>
+            <div id="nameInput"></div>
+            <div id="scoreInput"></div>
+        </div>
+        <div id="endQuizBtns" class="buttonContainer">
+            <button class="finishQuizButton" id="replayGame" onclick="replayQuiz()">Play Again</button>
+            <button class="finishQuizButton" id="clearScore" onclick="displayHighscores()">Clear Highscores</button>
+        </div>
+    </div>
+
+
+    <div id="popup-alert">
+        Placeholder text
+    </div>
+
+    <!-- Link to jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Link to javascript files -->
+
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+:root {
+    --indigopurple: indigo;
+    --solidpurple: purple;
+    --lightpurple: violet;
+    --lavenderpurple: lavender;
+    --purewhite: white;
+}
+
+h1, h2, h3, p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: var(--solidpurple);
+}
+
+.topnavbar {
+    padding: 20px;
+    margin: 0;
+}
+
+.highscores {
+    float: left;
+    color: var(--solidpurple);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-size: 20px;
+    border: none;
+    background-color: var(--purewhite);
+    cursor: pointer;
+}
+
+#timer {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.quizButtonContainer {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+#startingPage {
+    display: block;
+}
+
+.startQuizButton {
+    background-color: var(--solidpurple);
+    color: var(--purewhite);
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.quizButtons {
+    background-color: var(--solidpurple);
+    color: var(--lavenderpurple);
+    padding: 14px 40px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 20%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.startQuizButton:hover {
+    background-color: whitesmoke;
+    color: var(--purple);
+}
+
+#quizPage {
+    display: none;
+}
+
+#quizQuestions {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+#quizQuestions h1{
+    font-size: larger;
+    font-weight: 800;
+}
+
+.quizButtons:hover {
+    background-color: var(--lavenderpurple);
+    color: var(--indigopurple);
+}
+
+.finishQuizButton {
+    background-color: var(--solidpurple);
+    color: var(--purewhite);
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.finishQuizButton:hover {
+    background-color: whitesmoke;
+    color: var(--indigopurple);
+}
+
+#quizOverPage{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#finalQuizScore{
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enterUserName{
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highscorePage{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    margin: 1rem 1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    background-color: var(--lavenderpurple);
+    border-color: lightgrey;
+    border-radius: 10px;
+}
+
+#highscoreContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highscoreHeader{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom-color: var(--indigopurple);
+    border-bottom-style: outset;
+    color: var(--solidpurple);
+}
+
+#initials{
+    margin: 1rem;
+    height: 2rem;
+}
+
+#nameInput{
+    display: inline-block;
+    padding-left: 9.5rem;
+    font-weight: bold;
+}
+
+#scoreInput{
+    float: right;
+    padding-right: 8.75rem;
+    font-weight: bold;
+}
+
+#endQuizBtns {
+    display: none;
+}
+
+#popup-alert {
+    position: fixed;
+    bottom: 0.75rem;
+    display: none;
+    right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px grey;
+
+}

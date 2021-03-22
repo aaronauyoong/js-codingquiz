@@ -35,3 +35,33 @@ A working quiz application to aid users in testing fundamental Javascript knowle
 To install this application, please download the zip file, or alternatively clone the repository through GitHub's guidelines. 
 
 ## Screenshots
+
+1. Starting page of quiz application:
+<br>
+<img src="assets/images/codingquizscreenshot1.png" width="80%">
+<br>
+<br>
+
+2. When the quiz page loads, and first question appears:
+<br>
+<img src="assets/images/codingquizscreenshot2.png" width="80%">
+<br>
+<br>
+
+3. A popup will appear at the bottom right of the screen, indicating whether user answered correctly or incorrectly:
+<br>
+<img src="assets/images/codingquizscreenshot3.png" width="80%">
+<br>
+<br>
+
+4. Upon quiz completion/timer running out, will display final score and allow user to input name/initials to record score:
+<br>
+<img src="assets/images/codingquizscreenshot4.png" width="80%">
+<br>
+<br>
+
+5. High score page will be displayed:
+<br>
+<!-- <img src="assets/images/codingquizscreenshot5.png" width="80%"> -->
+<br>
+<br>

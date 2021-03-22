@@ -1,9 +1,11 @@
 :root {
     --indigopurple: indigo;
+    --deeppurple: rgba(49, 2, 49, 0.603);
     --solidpurple: purple;
     --lightpurple: violet;
     --lavenderpurple: lavender;
     --purewhite: white;
+    --brightturquoise: rgb(121, 187, 180);
 }
 
 h1, h2, h3, p {
@@ -136,7 +138,8 @@ a {
 
 #quizOverPage{
     display: none;
-    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -155,32 +158,36 @@ a {
 }
 
 #highscorePage{
+    height: 100%;
+    width: 100%;
     display: none;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border: solid;
-    margin: 1rem 1rem;
-    padding-top: .4rem;
-    padding-bottom: .4rem;
-    background-color: var(--lavenderpurple);
-    border-color: lightgrey;
-    border-radius: 10px;
+    justify-content: center;
 }
 
 #highscoreContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+    width: 50%;
+    border: solid;
+    border-color: var(--brightturquoise);
+    border-bottom-style: groove;
+    border-radius: 10px;
+    padding-bottom: .3rem;
+    background: var(--lavenderpurple);
 }
 
 #highscoreHeader{ 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    border-bottom-color: var(--indigopurple);
+    justify-content: space-around;
     border-bottom-style: outset;
-    color: var(--solidpurple);
+    border-bottom-color: var(--deeppurple);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: .5rem;
+    background-color: var(--deeppurple);
+    color: var(--purewhite);
+    font-family: sans-serif;
 }
 
 #initials{
@@ -190,14 +197,20 @@ a {
 
 #nameInput{
     display: inline-block;
-    padding-left: 9.5rem;
-    font-weight: bold;
+    padding-left: 8rem;
+    font-weight: 300;
+    list-style: none;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #scoreInput{
     float: right;
-    padding-right: 8.75rem;
-    font-weight: bold;
+    padding-right: 9.5rem;
+    font-weight: 300;
+    list-style: none;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #endQuizBtns {
@@ -218,5 +231,4 @@ a {
     font-size: 1rem;
     border-radius: 10px;
     box-shadow: 3px 5px 15px grey;
-
 }

@@ -20,6 +20,8 @@ let clearScoreButton = document.querySelector("#clearScore");
 let startingPageDiv = document.querySelector("#startingPage");
 let quizOverDiv = document.querySelector("#quizOverPage");
 let quizPageDiv = document.querySelector("#quizPage");
+let highscorePageDiv = document.querySelector("#highscorePage")
+let highscorePageContainer = document.querySelector("#highscoreContainer")
 
 // Button to save and submit current score
 let saveScoreBtn = document.querySelector("#submitQuizBtn");
@@ -170,79 +172,79 @@ saveScoreBtn.addEventListener("click", saveScore);
 // Function to save score to local storage
 function saveScore() {
 
-    if(enterName.value === "") {
+    if (!enterName.value) {
         alert("Your name cannot be blank.");
         return false;
-    }else{
-
-    addNewScore();
-    generateHighscores();
+    } else {
+        addNewScore();
+        generateHighscores();
     };
 
 };
 
 // Function to add new user score
-
 function addNewScore() { 
 
-    let savedUserScore = JSON.parse(localStorage.getItem("savedUserScore"));
+    // Save related quiz data as an object (later to be stored in localStorage)
     let newUser = enterName.value.trim();
     let newHighscore = {
         name: newUser,
-        score: score
+        score
     };
+
+    let savedUserScore = JSON.parse(localStorage.getItem("savedUserScore")) || [];
 
     // Hide the quiz over page
     quizOverDiv.style.display = "none";
     // Display the high score page and end game buttons
-    highscorePage.style.display = "flex";
-    endGameBtns.style.display = "block";
+    highscorePageDiv.style.display = "flex";
+    highscorePageContainer.style.display = "block";
+    finQuizBtns.style.display = "flex";
 
     savedUserScore.push(newHighscore);
-    localStorage.setItem("savedUserScore", JSON.stringify(savedUserScore));
-    generateHighscores();
 
+    // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
+    localStorage.setItem("savedUserScore", JSON.stringify(savedUserScore));
 };
 
 
-// This function clears the list for the high scores and generates a new high score list from local storage
+// This function generates a new high score list from local storage
 function generateHighscores() {
+
+    // Clearing content in name and score
     scoreNameDisplay.textContent = "";
     scoreValueDisplay.textContent = "";
 
-    let savedUserScore = JSON.parse(localStorage.getItem("savedUserScore"));
+    let savedUserScores = JSON.parse(localStorage.getItem("savedUserScore"));
 
-    for (let index = 0; index < highscores.length; index++) {
-        let newNameSpan = document.createElement("li");
-        let newScoreSpan = document.createElement("li");
+    // To accommodate for new users and their scores,
+    // Make a for loop and have their data become a list underneath each heading
 
-        newNameSpan.textContent = savedUserScore[i].name;
-        newScoreSpan.textContent = savedUserScore[i].score;
+    for (let index = 0; index < savedUserScores.length; index++) {
+        let newNameEl = document.createElement("li");
+        let newScoreEl = document.createElement("li");
 
-        scoreNameDisplay.appendChild(newNameSpan);
-        scoreValueDisplay.appendChild(newScoreSpan);
+        newNameEl.textContent = savedUserScores[index].name;
+        newScoreEl.textContent = savedUserScores[index].score;
+
+        scoreNameDisplay.appendChild(newNameEl);
+        scoreValueDisplay.appendChild(newScoreEl);
     };
 };
 
-// Function to organise scores
-
 // This function displays the high scores page while hiding all of the other pages/divs
 function displayHighscores() {
-    // Hides the starting screen
+    // Hides the starting screen, quiz page, and quiz over page
     startingPageDiv.style.display = "none";
-
-    // Hides the final display screen with highscores
     quizOverDiv.style.display = "none";
-
-    // Displays the quiz page
     quizPageDiv.style.display = "none";
 
-    // Displays the high score page
-    highscorePage.style.display = "flex";
+    // Displays the high score pages and the finish quiz buttons (replay and clear scores buttons)
+    highscorePageDiv.style.display = "flex";
+    highscorePageContainer.style.display = "block";
+    finQuizBtns.style.display = "flex";
 
-    // Displays the end game buttons
-    finQuizBtns.style.display = "block";
-
+    generateHighscores()
 };
 
 // Function to clear high score list in local storage and generates a new high score list

@@ -60,8 +60,14 @@ To install this application, please download the zip file, or alternatively clon
 <br>
 <br>
 
-5. High score page will be displayed:
+5. If no name/initials are entered, a popup will appear, prompting user to key in name to record high score
 <br>
-<!-- <img src="assets/images/codingquizscreenshot5.png" width="80%"> -->
+<img src="assets/images/codingquizscreenshot5.png" width="80%">
+<br>
+<br>
+
+6. High score page will be displayed:
+<br>
+<img src="assets/images/codingquizscreenshot6.png" width="80%">
 <br>
 <br>

@@ -10,15 +10,10 @@ During our journey to becoming a full-stack web developer, there will come insta
 
 ## Technologies
 This quiz application was built using HTML, CSS and Javascript. This application primarily relies on Javascript to: 
-<br>
-1) Start the quiz application,
-<br>
-2) Provide questions and multiple-choice answers, 
-<br>
-3) Collect user data to determine whether the answers are correct, 
-<br>
-4) Keep score and appends a final "highscore" page from quiz results. 
-<br>
+1. Start the quiz application,
+2. Provide questions and multiple-choice answers, 
+3. Collect user data to determine whether the answers are correct, 
+4. Keep score and appends a final "highscore" page from quiz results. 
 
 ## Deliverables
 A working quiz application to aid users in testing fundamental Javascript knowledge. 
